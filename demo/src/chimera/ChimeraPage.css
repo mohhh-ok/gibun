@@ -1,0 +1,519 @@
+.chimera-page {
+  background: var(--chimera-bg);
+  color: var(--chimera-text);
+  font-family: var(--chimera-font-body);
+  flex: 1;
+  padding: 2rem;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+.chimera-header {
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+  padding: 2rem;
+}
+
+.chimera-header h1 {
+  font-family: var(--chimera-font-heading);
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.chimera-subtitle {
+  font-size: 1.1rem;
+  opacity: 0.85;
+}
+
+.chimera-decoration {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.3em;
+  color: var(--chimera-accent);
+}
+
+.chimera-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.chimera-section {
+  background: var(--chimera-surface);
+  border-radius: var(--chimera-radius);
+  box-shadow: var(--chimera-shadow);
+  padding: 2rem;
+}
+
+.chimera-section h2 {
+  font-family: var(--chimera-font-heading);
+  margin-bottom: 1.25rem;
+  color: var(--chimera-accent);
+}
+
+.chimera-template-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+@media (min-width: 900px) {
+  .chimera-template-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.chimera-template-card {
+  padding: 1.25rem;
+  border: 2px solid var(--chimera-accent);
+  border-radius: var(--chimera-radius);
+  background: transparent;
+  color: var(--chimera-text);
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--chimera-font-body);
+  transition: all 0.25s ease;
+}
+
+.chimera-template-card.active {
+  background: var(--chimera-accent);
+  color: var(--chimera-accent-text);
+}
+
+.chimera-template-label {
+  font-weight: bold;
+  font-size: 1.05rem;
+  margin-bottom: 0.35rem;
+}
+
+.chimera-template-description {
+  font-size: 0.85rem;
+  opacity: 0.85;
+}
+
+.chimera-corpus-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.chimera-corpus-column h2 {
+  font-size: 1.15rem;
+}
+
+.chimera-intro p {
+  margin: 0 0 0.75rem;
+  line-height: 1.7;
+}
+
+.chimera-intro ol {
+  margin: 0.75rem 0;
+  padding-left: 1.5rem;
+  line-height: 1.9;
+}
+
+.chimera-intro-note {
+  font-size: 0.85rem;
+  opacity: 0.75;
+  border-top: 1px dashed var(--chimera-accent);
+  padding-top: 0.75rem;
+  margin-top: 1rem !important;
+}
+
+.chimera-sample-buttons {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.chimera-sample-label {
+  font-size: 0.85rem;
+  opacity: 0.75;
+}
+
+.chimera-sample-button {
+  padding: 0.3rem 0.75rem;
+  border: 1px solid var(--chimera-accent);
+  border-radius: calc(var(--chimera-radius) / 2);
+  background: transparent;
+  color: var(--chimera-accent);
+  font-family: var(--chimera-font-body);
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.chimera-sample-button:hover {
+  background: var(--chimera-accent);
+  color: var(--chimera-accent-text);
+}
+
+.chimera-textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid var(--chimera-accent);
+  border-radius: calc(var(--chimera-radius) / 2);
+  font-family: var(--chimera-font-body);
+  font-size: 0.95rem;
+  resize: vertical;
+  background: var(--chimera-bg);
+  color: var(--chimera-text);
+}
+
+.chimera-textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--chimera-accent);
+}
+
+.chimera-metrics {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  opacity: 0.75;
+}
+
+.chimera-settings-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.chimera-setting-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.chimera-setting-item label {
+  font-weight: bold;
+}
+
+.chimera-setting-item input[type="range"] {
+  width: 100%;
+  accent-color: var(--chimera-accent);
+}
+
+.chimera-generate-section {
+  text-align: center;
+}
+
+.chimera-generate-button {
+  padding: 1.1rem 3rem;
+  background: var(--chimera-accent);
+  color: var(--chimera-accent-text);
+  border: none;
+  border-radius: var(--chimera-radius);
+  font-size: 1.15rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: var(--chimera-shadow);
+}
+
+.chimera-generate-button:hover:not(:disabled) {
+  transform: translateY(-3px);
+}
+
+.chimera-generate-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.chimera-results-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.chimera-results-header h2 {
+  margin-bottom: 0;
+}
+
+.chimera-results-controls {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.chimera-playall-button,
+.chimera-stop-button {
+  padding: 0.5rem 1.1rem;
+  background: var(--chimera-accent);
+  color: var(--chimera-accent-text);
+  border: none;
+  border-radius: var(--chimera-radius);
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: transform 0.2s ease;
+}
+
+.chimera-stop-button {
+  background: transparent;
+  color: var(--chimera-accent);
+  border: 2px solid var(--chimera-accent);
+}
+
+.chimera-playall-button:hover,
+.chimera-stop-button:hover {
+  transform: translateY(-2px);
+}
+
+.chimera-results-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.chimera-result-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem;
+  background: var(--chimera-bg);
+  border-radius: calc(var(--chimera-radius) / 2);
+  border-left: 4px solid var(--chimera-accent);
+  transition: box-shadow 0.2s ease;
+}
+
+.chimera-result-item.speaking {
+  box-shadow: 0 0 0 2px var(--chimera-accent);
+}
+
+.chimera-result-text {
+  flex: 1;
+  line-height: 1.8;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.chimera-result-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.chimera-speak-button,
+.chimera-copy-button {
+  padding: 0.4rem 0.9rem;
+  background: var(--chimera-accent);
+  color: var(--chimera-accent-text);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .chimera-corpus-columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- テーマ別の装飾 --- */
+
+.chimera-page[data-theme="majiburi"] .chimera-section {
+  border: 2px solid #ffd1e8;
+}
+
+.chimera-page[data-theme="majiburi"] .chimera-decoration {
+  animation: chimera-float 3s ease-in-out infinite;
+}
+
+@keyframes chimera-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.chimera-page[data-theme="majichuuni"] {
+  background-image: radial-gradient(circle at 50% 0%, rgba(192, 38, 211, 0.15), transparent 60%);
+}
+
+.chimera-page[data-theme="majichuuni"] .chimera-section {
+  border: 1px solid rgba(220, 38, 38, 0.4);
+}
+
+.chimera-page[data-theme="majichuuni"] .chimera-header h1 {
+  text-shadow: 0 0 12px rgba(220, 38, 38, 0.8);
+}
+
+.chimera-page[data-theme="majigal"] .chimera-section {
+  border: 4px solid var(--chimera-accent);
+}
+
+.chimera-page[data-theme="majigal"] .chimera-template-card.active,
+.chimera-page[data-theme="majigal"] .chimera-generate-button,
+.chimera-page[data-theme="majigal"] .chimera-playall-button,
+.chimera-page[data-theme="majigal"] .chimera-copy-button,
+.chimera-page[data-theme="majigal"] .chimera-speak-button {
+  background: linear-gradient(135deg, #ff2d95 0%, #ffd60a 50%, #00e0ff 100%);
+}
+
+.chimera-page[data-theme="majigal"] .chimera-header h1 {
+  background: linear-gradient(135deg, #ff2d95, #ffd60a, #00e0ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* お嬢様: 薔薇とゴールドの上品系 */
+
+.chimera-page[data-theme="majijou"] .chimera-header h1 {
+  position: relative;
+  padding-bottom: 1rem;
+  color: #b91c5c;
+  letter-spacing: 0.05em;
+}
+
+.chimera-page[data-theme="majijou"] .chimera-header h1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 140px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #c9a961, transparent);
+}
+
+.chimera-page[data-theme="majijou"] .chimera-decoration {
+  color: #c9a961;
+  text-shadow: 0 1px 0 rgba(185, 28, 92, 0.15);
+}
+
+.chimera-page[data-theme="majijou"] .chimera-section {
+  border: 1px solid #eecfe0;
+}
+
+.chimera-page[data-theme="majijou"] .chimera-template-card,
+.chimera-page[data-theme="majijou"] .chimera-textarea {
+  border: 1px solid #c9a961;
+}
+
+.chimera-page[data-theme="majijou"] .chimera-generate-button,
+.chimera-page[data-theme="majijou"] .chimera-playall-button,
+.chimera-page[data-theme="majijou"] .chimera-copy-button,
+.chimera-page[data-theme="majijou"] .chimera-speak-button,
+.chimera-page[data-theme="majijou"] .chimera-template-card.active {
+  border: 1px solid #c9a961;
+  box-shadow: inset 0 0 0 1px rgba(201, 169, 97, 0.5);
+}
+
+.chimera-page[data-theme="majijou"] .chimera-result-item {
+  border-left: 4px double #c9a961;
+}
+
+/* 武士: 和紙と墨と朱印 */
+
+.chimera-page[data-theme="majibushi"] {
+  background-image:
+    radial-gradient(circle at 15% 20%, rgba(26, 26, 26, 0.03), transparent 45%),
+    radial-gradient(circle at 85% 75%, rgba(26, 26, 26, 0.04), transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(201, 42, 42, 0.02), transparent 70%);
+}
+
+.chimera-page[data-theme="majibushi"] .chimera-header h1 {
+  font-weight: 900;
+  position: relative;
+  display: inline-block;
+  padding-right: 2.5rem;
+}
+
+.chimera-page[data-theme="majibushi"] .chimera-header h1::after {
+  content: "印";
+  position: absolute;
+  top: -0.4rem;
+  right: 0;
+  width: 1.8rem;
+  height: 1.8rem;
+  line-height: 1.8rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #c92a2a;
+  border: 2px solid #c92a2a;
+  border-radius: 2px;
+  transform: rotate(-6deg);
+}
+
+.chimera-page[data-theme="majibushi"] .chimera-decoration {
+  color: #c92a2a;
+}
+
+.chimera-page[data-theme="majibushi"] .chimera-section {
+  border: 1px solid rgba(26, 26, 26, 0.15);
+}
+
+.chimera-page[data-theme="majibushi"] .chimera-result-item:nth-child(odd) {
+  transform: rotate(-0.4deg);
+}
+
+.chimera-page[data-theme="majibushi"] .chimera-result-item:nth-child(even) {
+  transform: rotate(0.4deg);
+}
+
+.chimera-page[data-theme="majibushi"] .chimera-template-card.active {
+  box-shadow: inset 0 0 0 1px #c92a2a;
+}
+
+/* 赤ちゃん: パステル多色とふわふわ */
+
+.chimera-page[data-theme="majibabu"] .chimera-header h1::before {
+  content: "🍼 ";
+}
+
+.chimera-page[data-theme="majibabu"] .chimera-header h1::after {
+  content: " 🎀";
+}
+
+.chimera-page[data-theme="majibabu"] .chimera-decoration {
+  animation: chimera-majibabu-bounce 1.6s ease-in-out infinite;
+}
+
+@keyframes chimera-majibabu-bounce {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-8px) rotate(2deg); }
+}
+
+.chimera-page[data-theme="majibabu"] .chimera-section {
+  border: 3px dashed #a8dadc;
+}
+
+.chimera-page[data-theme="majibabu"] .chimera-template-card {
+  border-color: #f4b6c2;
+}
+
+.chimera-page[data-theme="majibabu"] .chimera-template-card:nth-child(3n+1) {
+  border-color: #f4b6c2;
+}
+
+.chimera-page[data-theme="majibabu"] .chimera-template-card:nth-child(3n+2) {
+  border-color: #a8dadc;
+}
+
+.chimera-page[data-theme="majibabu"] .chimera-template-card:nth-child(3n+3) {
+  border-color: #ffe066;
+}
+
+.chimera-page[data-theme="majibabu"] .chimera-generate-button {
+  border-radius: 999px;
+  padding: 1.2rem 3.5rem;
+}
+
+.chimera-page[data-theme="majibabu"] .chimera-result-item:nth-child(3n+1) {
+  border-left-color: #f4b6c2;
+}
+
+.chimera-page[data-theme="majibabu"] .chimera-result-item:nth-child(3n+2) {
+  border-left-color: #a8dadc;
+}
+
+.chimera-page[data-theme="majibabu"] .chimera-result-item:nth-child(3n+3) {
+  border-left-color: #ffe066;
+}
