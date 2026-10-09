@@ -14,6 +14,10 @@ updates:
     schedule:
       interval: "weekly"
     open-pull-requests-limit: 10
+    ignore:
+      # typescript-eslint 8.71.1 の peer が typescript <6.1.0 で TS 7 未対応。対応したら外す
+      - dependency-name: "typescript"
+        update-types: ["version-update:semver-major"]
     groups:
       minor-and-patch:
         update-types: ["minor", "patch"]
