@@ -1,6 +1,6 @@
 {
   "name": "gibun",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "type": "module",
   "description": "日本語用、テスト文章生成ライブラリ。マルコフ連鎖を使用しています",
   "main": "dist/index.js",
